@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -11,6 +13,9 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+SPEED = 600
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
