@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Red X5.png-837c044ce7e12cd128dacc50036d9151.stex"
+
+[deps]
+
+source_file="res://Assets/Sprites/Red X5.png"
+source_md5="c7e452183b1dfd20fdb123e9529fab25"
+
+dest_files=[ "res://.import/Red X5.png-837c044ce7e12cd128dacc50036d9151.stex" ]
+dest_md5="f25245ba115c2483f8f305a264d10b61"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
