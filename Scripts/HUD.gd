@@ -2,7 +2,11 @@ extends CanvasLayer
 
 signal start_game
 
+func _ready():
+	$MessageLabel.hide()
+
 func show_message(text):
+	$MessageTimer.stop()
 	$MessageLabel.text = text
 	$MessageLabel.show()
 
