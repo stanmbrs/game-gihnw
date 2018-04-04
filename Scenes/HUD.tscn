@@ -58,6 +58,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="StartButton" type="Button" parent="." index="2"]
 
+pause_mode = 2
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -80,7 +81,7 @@ group = null
 text = "Start"
 flat = false
 align = 1
-_sections_unfolded = [ "Margin", "Rect" ]
+_sections_unfolded = [ "Margin", "Pause", "Rect" ]
 
 [node name="MessageTimer" type="Timer" parent="." index="3"]
 

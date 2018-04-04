@@ -54,9 +54,45 @@ autostart = false
 
 [node name="Spikes" type="Node" parent="." index="5"]
 
+editor/display_folded = true
+
 [node name="SpikesX5" parent="Spikes" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 900, 700 )
+
+[node name="Spawns" type="Node" parent="." index="6"]
+
+[node name="Spawn1" type="Position2D" parent="Spawns" index="0"]
+
+position = Vector2( 139.802, 420.54 )
+
+[node name="Spawn2" type="Position2D" parent="Spawns" index="1"]
+
+position = Vector2( 700.163, 300.855 )
+
+[node name="Spawn3" type="Position2D" parent="Spawns" index="2"]
+
+position = Vector2( 1130.3, 620.401 )
+
+[node name="Spawn4" type="Position2D" parent="Spawns" index="3"]
+
+position = Vector2( 1059.72, 179.886 )
+
+[node name="Spawn5" type="Position2D" parent="Spawns" index="4"]
+
+position = Vector2( 260.035, 500.551 )
+
+[node name="Spawn6" type="Position2D" parent="Spawns" index="5"]
+
+position = Vector2( 300.962, 260.658 )
+
+[node name="Spawn7" type="Position2D" parent="Spawns" index="6"]
+
+position = Vector2( 680.351, 619.891 )
+
+[node name="Spawn8" type="Position2D" parent="Spawns" index="7"]
+
+position = Vector2( 899.758, 500.558 )
 
 [connection signal="timeout" from="TimeScoreTimer" to="." method="_on_TimeScoreTimer_timeout"]
 
