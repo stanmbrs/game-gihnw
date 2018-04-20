@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tile Set/TileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/SpikesX5.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/MobTurret.tscn" type="PackedScene" id=6]
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -54,13 +55,13 @@ autostart = false
 
 [node name="Spikes" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="SpikesX5" parent="Spikes" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 900, 700 )
 
 [node name="Spawns" type="Node" parent="." index="6"]
+
+editor/display_folded = true
 
 [node name="Spawn1" type="Position2D" parent="Spawns" index="0"]
 
@@ -94,10 +95,13 @@ position = Vector2( 680.351, 619.891 )
 
 position = Vector2( 899.758, 500.558 )
 
+[node name="MobTurret" parent="." index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 140, 420 )
+DETECT_RADIUS = 250
+
 [connection signal="timeout" from="TimeScoreTimer" to="." method="_on_TimeScoreTimer_timeout"]
 
 [connection signal="start_game" from="HUD" to="." method="new_game"]
-
-[connection signal="game_over" from="Spikes/SpikesX5" to="." method="game_over"]
 
 

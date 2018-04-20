@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/MobTurret.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Bullet.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -10,18 +11,20 @@ extents = Vector2( 20.0386, 20.0643 )
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 274.283
+radius = 100.0
 
-[node name="MobShooter" type="KinematicBody2D" index="0"]
+[node name="MobTurret" type="KinematicBody2D" index="0"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 8
+collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-GRAVITY = null
-DETECT_RADIUS = null
-FIRE_RATE = null
+_sections_unfolded = [ "Collision" ]
+GRAVITY = 50.0
+DETECT_RADIUS = 300
+FIRE_RATE = 1.0
+BULLET = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -53,11 +56,27 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 16
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visibility" index="0"]
 
 shape = SubResource( 2 )
+
+[node name="ShootTimer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
+
+[connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
 
 
