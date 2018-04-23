@@ -13,9 +13,10 @@ func hit_by_bullet():
 	queue_free() # kill the mob
 
 func shoot(pos):
+	var shooter = get_instance_id()
 	var b = BULLET.instance()
 	var a = (pos - global_position).angle()
-	b.start(global_position, a + rand_range(-0.05, 0.05))
+	b.start(global_position, a + rand_range(-0.05, 0.05), shooter)
 	get_parent().add_child(b)
 	can_shoot = false
 	$ShootTimer.start()

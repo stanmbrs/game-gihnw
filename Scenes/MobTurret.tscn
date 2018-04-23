@@ -13,7 +13,7 @@ extents = Vector2( 20.0386, 20.0643 )
 custom_solver_bias = 0.0
 radius = 100.0
 
-[node name="MobTurret" type="KinematicBody2D" index="0"]
+[node name="MobTurret" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 8
