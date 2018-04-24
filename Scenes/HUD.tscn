@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=1]
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )

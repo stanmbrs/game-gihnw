@@ -8,7 +8,7 @@
 [ext_resource path="res://Scenes/SpikesX5.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Spikes.tscn" type="PackedScene" id=7]
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 script = ExtResource( 1 )
 MOB_TURRET = ExtResource( 2 )
@@ -109,7 +109,7 @@ position = Vector2( 300, 250 )
 "Spawn",
 ]]
 
-position = Vector2( 680, 610 )
+position = Vector2( 700, 610 )
 
 [node name="Spawn8" type="Position2D" parent="Spawns" index="7" groups=[
 "Spawn",
@@ -133,7 +133,7 @@ position = Vector2( 70, 610 )
 "Spawn",
 ]]
 
-position = Vector2( 730, 460 )
+position = Vector2( 700, 450 )
 
 [node name="Timers" type="Node" parent="." index="6"]
 
