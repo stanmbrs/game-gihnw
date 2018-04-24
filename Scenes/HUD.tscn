@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=1]
 
-[node name="HUD" type="CanvasLayer" index="0"]
+[node name="HUD" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -64,9 +64,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -80.0
-margin_top = 30.0
+margin_top = 20.0
 margin_right = 70.0
-margin_bottom = 90.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -83,7 +83,34 @@ flat = false
 align = 1
 _sections_unfolded = [ "Margin", "Pause", "Rect" ]
 
-[node name="MessageTimer" type="Timer" parent="." index="3"]
+[node name="QuitButton" type="Button" parent="." index="3"]
+
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = 100.0
+margin_right = 70.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Quit"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin", "Pause", "Rect" ]
+
+[node name="MessageTimer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 2.0
@@ -91,6 +118,8 @@ one_shot = true
 autostart = false
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
 
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
 

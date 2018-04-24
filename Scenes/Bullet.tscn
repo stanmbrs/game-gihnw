@@ -7,7 +7,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 5.00735, 2.99722 )
 
-[node name="Bullet" type="Area2D" index="0"]
+[node name="Bullet" type="Area2D" groups=[
+"Bullet",
+]]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -20,7 +22,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
-SPEED = 600
+SPEED = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

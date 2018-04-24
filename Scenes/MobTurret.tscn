@@ -13,7 +13,10 @@ extents = Vector2( 20.0386, 20.0643 )
 custom_solver_bias = 0.0
 radius = 100.0
 
-[node name="MobTurret" type="KinematicBody2D"]
+[node name="MobTurret" type="KinematicBody2D" groups=[
+"MobTurret",
+"Mob",
+]]
 
 input_pickable = false
 collision_layer = 8
@@ -22,8 +25,8 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
 GRAVITY = 50.0
-DETECT_RADIUS = 300
-FIRE_RATE = 1.0
+DETECT_RADIUS = 400
+FIRE_RATE = 1.2
 BULLET = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]

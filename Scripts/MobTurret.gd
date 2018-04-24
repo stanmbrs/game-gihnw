@@ -8,8 +8,16 @@ export (PackedScene) var BULLET
 var target  # who are we shooting at?
 var can_shoot = true
 var velocity = Vector2()
+var spawn_turret
+
+func start(spawn):
+	spawn_turret = spawn
+	position = spawn.position
+	can_shoot = false
+	$ShootTimer.start()
 
 func hit_by_bullet():
+	get_node("/root/Main").set_spawn_available(spawn_turret)
 	queue_free() # kill the mob
 
 func shoot(pos):

@@ -13,16 +13,20 @@ func show_message(text):
 func show_game_over():
 	show_message("Game Over")
 	$StartButton.show()
+	$QuitButton.show()
 
 func update_score(score):
     $TimeScoreLabel.text = "Time: " + str(score)
 
-
 func _on_StartButton_pressed():
 	$StartButton.hide()
+	$QuitButton.hide()
 	show_message("Survive !")
 	$MessageTimer.start()
 	emit_signal("start_game")
 
 func _on_MessageTimer_timeout():
 	$MessageLabel.hide()
+
+func _on_QuitButton_pressed():
+	get_tree().quit()

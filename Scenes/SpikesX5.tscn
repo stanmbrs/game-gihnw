@@ -8,7 +8,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 100, 19.9862 )
 
-[node name="SpikesX5" type="Area2D"]
+[node name="SpikesX5" type="Area2D" groups=[
+"Spikes",
+]]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
